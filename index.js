@@ -29,6 +29,11 @@ app.get('/users', function(req, res) {
 	});
 });
 
+app.get('/projects', (req, res) =>{
+  var title = 'projects';
+  res.render('pages/projects',{'title' : title});
+});
+
 //add user/view route - we are cheating by using the array index - 1
 app.get('/users/view/:id', function(req, res) {
  var title = 'User Page';
